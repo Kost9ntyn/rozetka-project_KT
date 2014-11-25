@@ -12,5 +12,7 @@ public class TestData {
 
     public static final String APPLE_MACBOOK_PRO_RETINA_15_Z0PU002JE = "Apple MacBook Pro Retina 15\" (Z0PU002JE) Официальная гарантия!";
 
+    public static final String NOTEBOOKS_APPLE = "Ноутбуки Apple";
+
 
 }

@@ -10,7 +10,7 @@ import utils.Log4Test;
  */
 public class AppleMacBookProRetina15_Z0PU002JE extends TestBase{
 
-    protected By productDescription = By.xpath(".//*[@id='block_with_goods']/div[1]/div[1]/div[3]/div[1]/div/div/div[3]/a");
+    protected By productDescription = By.xpath(".//a[contains(text(),'Apple MacBook Pro Retina 15\" (Z0PU002JE) Официальная гарантия!')]");
 
     protected WebElement productContent;
 

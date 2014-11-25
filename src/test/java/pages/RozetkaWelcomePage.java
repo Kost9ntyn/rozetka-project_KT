@@ -20,21 +20,14 @@ public class RozetkaWelcomePage extends TestBase{
     {
 
         webDriver.get(URL);
-        Log4Test.info("Open WebUrl " + URL);
+        Log4Test.info("Open WebUrl" + URL);
 
     }
 
     public boolean isOpened()
     {
+        Log4Test.info("Check if the url equals to " + URL);
         return webDriver.getCurrentUrl().equals(URL);
-    }
-
-    public void searchProduct(String productName)
-    {
-        Log4Test.info("Search product " + productName);
-        webDriver.findElement(searchString).clear();
-        webDriver.findElement(searchString).sendKeys(productName);
-        webDriver.findElement(searchString).sendKeys(Keys.RETURN);
     }
 
 }

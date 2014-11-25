@@ -11,6 +11,8 @@ import java.util.concurrent.TimeUnit;
 
 public class TestBase {
 
+    private static final int timeout = 20;
+
     protected static WebDriver webDriver;
 
     protected static WebDriverWait wait;
@@ -22,15 +24,15 @@ public class TestBase {
 
         webDriver = WebDriverFactory.getWebDriver(TestData.BROWSER_NAME);
 
-        wait = new WebDriverWait(webDriver, 30);
+        wait = new WebDriverWait(webDriver, timeout);
 
         webDriver.manage().window().maximize();
 
-        webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        webDriver.manage().timeouts().implicitlyWait(timeout, TimeUnit.SECONDS);
 
-        webDriver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+        webDriver.manage().timeouts().pageLoadTimeout(timeout, TimeUnit.SECONDS);
 
-        webDriver.manage().timeouts().setScriptTimeout(30, TimeUnit.SECONDS);
+        webDriver.manage().timeouts().setScriptTimeout(timeout, TimeUnit.SECONDS);
 
     }
 
