@@ -24,7 +24,6 @@ public class ManufacturesChecking extends TestBase {
                 manufacture.findElement(By.xpath(".//a")).click();
                 break;
             }
-
         }
     }
 

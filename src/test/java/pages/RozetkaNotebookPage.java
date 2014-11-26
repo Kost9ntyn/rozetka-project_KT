@@ -2,7 +2,6 @@ package pages;
 
 import core.TestBase;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import utils.Log4Test;
@@ -18,14 +17,12 @@ public class RozetkaNotebookPage extends TestBase {
 
     private String NB_link = ".//*[@class='m-main-fat-link3'][@href='http://rozetka.com.ua/notebooks/c80004/']";
 
-    public boolean isOpened()
-    {
+    public boolean isOpened() {
         Log4Test.info("Check if the url equals to " + URL);
         return webDriver.getCurrentUrl().equals(URL);
     }
 
-    public void clickOn_NB_link()
-    {
+    public void clickOn_NB_link() {
         WebElement Menu1 = webDriver.findElement(By.xpath(PC_NB_link));
         Log4Test.info("Предвинули курсор на закладку");
         new Actions(webDriver).moveToElement(Menu1).perform();
